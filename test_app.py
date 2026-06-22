@@ -54,18 +54,15 @@ def test_parse_guess_non_numeric():
 # --- check_guess ---
 
 def test_check_guess_correct():
-    outcome, message = check_guess(10, 10)
-    assert outcome == "Win"
+    assert check_guess(10, 10) == "Win"
 
 
 def test_check_guess_too_high():
-    outcome, _ = check_guess(15, 8)
-    assert outcome == "Too High"
+    assert check_guess(15, 8) == "Too High"
 
 
 def test_check_guess_too_low():
-    outcome, _ = check_guess(3, 18)
-    assert outcome == "Too Low"
+    assert check_guess(3, 18) == "Too Low"
 
 
 # --- update_score (Easy: 8 attempts, range 1–20) ---
